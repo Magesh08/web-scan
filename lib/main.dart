@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,6 +29,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String result = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,20 +49,7 @@ class _HomePageState extends State<HomePage> {
                           enableBackButton: true,
                           backButtonIcon: Icon(Icons.arrow_back_ios),
                         ),
-                        delayMillis: 2000,
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 20,
-                            ),
-                            TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Enter Text',
-                                border: OutlineInputBorder(),
-                              ),
-                            ),
-                          ],
-                        ),
+                        delayMillis: 2000, // Delay before scanning starts
                       ),
                     ));
                 setState(() {
